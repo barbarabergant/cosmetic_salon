@@ -1,0 +1,88 @@
+{% extends 'barbara/base.html' %}
+{% load static %}
+
+{% block body_block %} 
+<div class="video-section">
+<video loop preload autoplay>
+    <source src="{{ MEDIA_URL }}breezy_girl.mp4" type="video/mp4;codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
+</video>
+<div>
+    <svg id="overlay" width="100vw" height="100vh" style="z-index: 100;">
+        <defs>
+          <mask id="mymask">
+            <rect width="100%" height="100%" fill="white"/>
+            <text x="320" y="140" class="welcome-text" text-anchor="middle">kozmetični  salon</text>
+            <text x="320" y="190" class="welcome-text" text-anchor="middle">Barbara</text>
+          </mask>
+        </defs>
+        <rect fill="black" fill-opacity="0.4" width="100vw" height="100vh" mask="url(#mymask)"/> 
+    </svg>
+</div>
+
+<div class ="services-shortcut">
+    <h2><center>PONUDBA</center><br></h2>
+<div class="container-fluid">
+<div class="row justify-content-md-center">
+    <div class="col-md-auto">
+<div class ="services-wrapper"><a href="{% url 'barbara:services' %}#obraz" style="text-decoration: none"><img class="circular--square" src="{% static 'images/obraz.jpeg' %}" alt="obraz"></a></div>
+</div>
+<div class="col-md-auto">
+    <div class ="services-wrapper"><a href="{% url 'barbara:services' %}#roke"><img class="circular--square" src="{% static 'images/roke.jpeg' %}" alt="roke"></a></div>
+</div>
+<div class="col-md-auto">
+    <div class ="services-wrapper"><a href="{% url 'barbara:services' %}#noge"><img class="circular--square" src="{% static 'images/noge.jpeg' %}" alt="noge"></a></div>
+</div>
+</div>
+
+<div class="row justify-content-md-center">
+<div class="col-md-auto">
+    <div class ="services-wrapper"><a href="{% url 'barbara:services' %}#depilacije"><img class="circular--square" src="{% static 'images/depilacije.jpeg' %}" alt="depilacije"></a></div>
+</div>
+<div class="col-md-auto">
+    <div class ="services-wrapper"><a href="{% url 'barbara:services' %}#masaze"><img class="circular--square" src="{% static 'images/masaze.jpeg' %}" alt="masaze"></a></div>
+</div>
+</div>
+</div>
+</div>
+
+<section class="section_style">
+<div class="section_style_about">
+<div class="row">
+        <div class="col-sm">
+<div class="oBarbari">
+        </div>
+</div>
+    <p>Spoznaj Barbaro.</p>
+        <div class="col-sm">
+    <div class="more_button">
+        <a href="{% url 'barbara:about' %}"><span>preberi več</span></a>
+    </div>
+        </div>
+</div>
+</div>
+</section>
+
+<section class="section_style">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{% static 'images/planner.jpg' %}" width=100% alt="serum">
+        </div>
+        <div class="col-md-6">
+            <div class="reservation-box">
+                <div class="one">Vabljeni!<br></div>
+                <div class="two">REZERVIRAJTE</div>
+                <div class="three"><br>Barbarin delovnik poteka po dogovoru. Naročite se prek telefona ali e-maila.<br></div>
+                <p><br></p>
+                <div class="row">
+                    <div class="col-sm">
+                <div class="more_button"><a href="{% url 'barbara:contact' %}"><span>+386 41 429 948</span></a></div>
+                    </div>
+                    <div class="col-sm">
+                <div class="more_button"><a href="{% url 'barbara:contact' %}"><span>barbara.kacin@gmail.com</span></a></div>
+                    </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+{% endblock %}

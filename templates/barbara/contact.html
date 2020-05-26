@@ -1,0 +1,82 @@
+{% extends 'barbara/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block body_block %}
+<section class="header-section">
+</section>
+
+<p class="main-headings">KONTAKT</h2>
+<hr>
+<div class="container-fluid">
+<div class="row justify-content-md-center">
+  <div class="col-md-3 my-auto">
+    <div class="row">
+      <div class="col-md-3 my-auto">
+        <object class="svg_logo" type="image/svg+xml" data="{% static 'images/call.svg' %}" width="70px" height="70px" style="border:4px solid #DA7EC4; border-radius: 100%; padding: 4px;"></object>
+      </div>
+      <div class="col-md-9 my-auto">
+        <p class="contact-headings">Telefon</p>
+        <p>+386 41 429 948</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-auto my-auto">
+    <div class="row">
+      <div class="col-md-3 my-auto">
+        <object class="svg_logo" type="image/svg+xml" data="{% static 'images/at.svg' %}" width="70px" height="70px" style="border:4px solid #DA7EC4; border-radius: 100%; padding: 4px;"></object>
+      </div>
+      <div class="col-md-9 my-auto">
+        <p class="contact-headings">E-pošta</p>
+        barbara.kacin@gmail.com
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3 my-auto">
+    <div class="row">
+      <div class="col-md-3 my-auto">
+        <object class="svg_logo" type="image/svg+xml" data="{% static 'images/time.svg' %}" width="70px" height="70px" style="border:4px solid #DA7EC4; border-radius: 100%; padding: 4px;"></object>
+      </div>
+      <div class="col-md-9 my-auto">
+        <p class="contact-headings">Odpiralni čas</p>
+        Po dogovoru.
+      </div>
+    </div>
+  </div>
+
+    <div class="col-md-auto my-auto">
+    <div class="row">
+      <div class="col-md-4 my-auto">
+        <object class="svg_logo" type="image/svg+xml" data="{% static 'images/navigation.svg' %}" width="70px" height="70px" style="border:4px solid #DA7EC4; border-radius: 100%; padding: 4px;"></object>
+      </div>
+      <div class="col-md-8 my-auto">
+        <p class="contact-headings">Naslov</p>
+        Savska cesta 20, <br> 4270 Jesenice.
+        <a href="{% url 'barbara:contact' %}#navigacija"><p class="link-text" style="color: #DA7EC4;">Zemljevid</p></a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<hr>
+
+{% block content %}
+<p class="sub-headings">Piši mi</p>
+<section class="contact-me-section">
+  <div class="row">
+      <div class="col-md-7">
+        <form method="POST" style="margin-left: 1rem; margin-top: 10px; margin-bottom: 10px;">
+          {% csrf_token %}
+          {% crispy form %}
+        </form>
+      </div>    
+  </div>
+</section>
+{% endblock content %}
+
+<div id="navigacija"><p class="sub-headings">Zemljevid</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2750.250499797288!2d14.081250614988159!3d46.423914276914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477a9a7e1eab9fcd%3A0x5dd07e3c3e0c9f04!2sBarbara%20Torkar%20Dov%C5%BEan%20s.p.!5e0!3m2!1ssl!2ssi!4v1590396297994!5m2!1ssl!2ssi" class="google_map" allowfullscreen="" frameBorder="0" aria-hidden="false" tabindex="0"></iframe>
+</div>
+{% endblock %}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head lang="en"> 
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="{% static 'images/p-trans.png' %}">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cantata+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/navigation.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/pricing-list.css' %}" />
+	
+	
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="{% static 'js/pricing-list.js' %}"></script>
+	<script src="{% static 'js/nav_bar.js' %}"></script>
+	<script src="{% static 'js/up-button.js' %}"></script>
+
+	<!--- font for button up -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+	
+<body>
+		<nav class="nav">
+			<div class="container-fluid">
+				<div class="logo">
+					<a href="{% url 'barbara:index' %}"><img class="img_logo" src="{% static 'images/p-trans.png' %}" alt="logo"></a>
+				</div>
+				<div id="mainListDiv" class="main_list">
+					<ul class="navlinks">
+						<li><a href="{% url 'barbara:index' %}">Domov</a></li>
+						<li><a href="{% url 'barbara:about' %}">O Barbari</a></li>
+						<li><a href="{% url 'barbara:services' %}">Ponudba</a></li>
+						<li><a href="{% url 'barbara:contact' %}">Kontakt</a></li>
+					</ul>
+				</div>
+				<span class="navTrigger">
+					<i></i>
+					<i></i>
+					<i></i>
+				</span>
+			</div>
+		</nav>	
+
+		<!--- compressed menu function -->
+		<script>
+		$('.navTrigger').click(function () {
+			$(this).toggleClass('active');
+			console.log("Clicked menu");
+			$("#mainListDiv").toggleClass("show_list");
+			$("#mainListDiv").fadeIn();
+
+		});
+		</script>
+
+<button onclick="topFunction()" id="myBtn" style="font-size:24px"><i class="fa fa-angle-up"></i></button>
+
+<script>
+	//Get the button:
+	mybutton = document.getElementById("myBtn");
+
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		mybutton.style.display = "block";
+	} else {
+		mybutton.style.display = "none";
+	}
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+	document.body.scrollTop = 0; // For Safari
+	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	}
+</script>
+
+<div>
+	{% block body_block %} 
+	{% endblock %}
+</div>
+
+<!--- FOOTER -->
+<footer>
+	<div class="container-fluid">
+		<div class="row">
+		  <div class="col-sm-3" style="padding-bottom:0;">
+	<section class="logo-section" style="padding-bottom:0;">
+	<div class="logo">
+		<img height="135" width="auto" src="{% static 'images/p-trans.png' %}" alt="logo"><br>
+		<p style="font-family: 'Charmonman', cursive; font-size: 22px; line-height: 21px;">kozmetični salon</p>
+		<p style="font-family: 'Cantata One', serif; font-size: 30px; color: #DA7EC4; text-shadow: -1px 1px 2px black,
+		1px 1px 2px black,
+		1px -1px 0 black,
+		-1px -1px 0 black; font-weight: bolder; line-height: 12px;">BARBARA</p>
+	</div>
+</section>
+</div>
+
+	<div class="col-sm-2" style="padding-top: 30px;">
+	<div class="footer-left">
+	<p class="footer_headings">Meni</p>
+	<ul style="list-style-type:none; padding:0; text-align: center;">
+	<li><a class="footer-menu" href="{% url 'barbara:index' %}">Domov</a></li>
+	<li><a class="footer-menu" href="{% url 'barbara:about' %}"><center>O Barbari</center></a></li>
+	<li><a class="footer-menu" href="{% url 'barbara:services' %}"><center>Ponudba</center></a></li>
+	<li><a class="footer-menu" href="{% url 'barbara:contact' %}"><center>Kontakt</center></a></li>
+	</ul>
+</div>
+</div>
+
+<div class="col-sm-4" style="padding-top: 30px;">
+<div class="footer-center">
+<div><p class="footer_headings">Odpiralni čas</p>
+<p><center>Po dogovoru.</center></p></div>
+<hr>
+<div><center><img class="icon" src="{% static 'images/navigation.png' %}">Savska cesta 20, 4270 Jesenice, SI</center>
+<a href="{% url 'barbara:contact' %}#navigacija"><center><p class="link-text" style="color: #DA7EC4;">Zemljevid in navodila za pot</p></center></a></div>
+<hr>
+</div>
+</div>
+
+<div class="col-sm-3" style="padding-top: 30px;">
+<div class="footer-right">
+<p class="footer_headings">Kontakt</p>
+<div><img class="icon" src="{% static 'images/call.png' %}"> +386 41 429 948</div>
+<br>
+<div><img class="icon" src="{% static 'images/at.png' %}"> barbara.kacin@gmail.com</div>
+</div>
+</div>
+</div>
+</div>
+<section class="pink-footer">SI / EN</section>
+</footer>
+</body>
+</html>
