@@ -1,70 +1,43 @@
 <!DOCTYPE html>
 {% load static %}
+{% load i18n %}
+
 <html>
 	<head lang="en"> 
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no">
 	<link rel="icon" href="{% static 'images/p-trans.png' %}">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.0/lottie.min.js"></script>
+	<script src="{% static 'js/lottie.js' %}" type="text/javascript"></script>
+
+	<script src="{% static 'js/lazy-line-painter-1.9.6.min.js' %}" ></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		
 	<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Cantata+One&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 	<link rel="stylesheet" href="{% static 'css/style.css' %}" />
 	<link rel="stylesheet" href="{% static 'css/navigation.css' %}" />
 	<link rel="stylesheet" href="{% static 'css/pricing-list.css' %}" />
-	
-	
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="{% static 'js/pricing-list.js' %}"></script>
 	<script src="{% static 'js/nav_bar.js' %}"></script>
 	<script src="{% static 'js/up-button.js' %}"></script>
-
-	<!--- font for button up -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 
-	
 <body>
-		<nav class="nav">
-			<div class="container-fluid">
-				<div class="logo">
-					<a href="{% url 'barbara:index' %}"><img class="img_logo" src="{% static 'images/p-trans.png' %}" alt="logo"></a>
-				</div>
-				<div id="mainListDiv" class="main_list">
-					<ul class="navlinks">
-						<li><a href="{% url 'barbara:index' %}">Domov</a></li>
-						<li><a href="{% url 'barbara:about' %}">O Barbari</a></li>
-						<li><a href="{% url 'barbara:services' %}">Ponudba</a></li>
-						<li><a href="{% url 'barbara:contact' %}">Kontakt</a></li>
-					</ul>
-				</div>
-				<span class="navTrigger">
-					<i></i>
-					<i></i>
-					<i></i>
-				</span>
-			</div>
-		</nav>	
 
-		<!--- compressed menu function -->
-		<script>
-		$('.navTrigger').click(function () {
-			$(this).toggleClass('active');
-			console.log("Clicked menu");
-			$("#mainListDiv").toggleClass("show_list");
-			$("#mainListDiv").fadeIn();
-
-		});
-		</script>
-
-<button onclick="topFunction()" id="myBtn" style="font-size:24px"><i class="fa fa-angle-up"></i></button>
-
+<button onclick="topFunction()" id="myBtn" aria-hidden="true"><i class="fa fa-angle-up"></i></button>
 <script>
 	//Get the button:
 	mybutton = document.getElementById("myBtn");
@@ -87,62 +60,60 @@
 	}
 </script>
 
-<div>
-	{% block body_block %} 
-	{% endblock %}
-</div>
+	<div>
+		{% block body_block %} 
+		{% endblock %}
+	</div>
 
 <!--- FOOTER -->
 <footer>
 	<div class="container-fluid">
-		<div class="row">
-		  <div class="col-sm-3" style="padding-bottom:0;">
-	<section class="logo-section" style="padding-bottom:0;">
-	<div class="logo">
-		<img height="135" width="auto" src="{% static 'images/p-trans.png' %}" alt="logo"><br>
-		<p style="font-family: 'Charmonman', cursive; font-size: 22px; line-height: 21px;">kozmetični salon</p>
-		<p style="font-family: 'Cantata One', serif; font-size: 30px; color: #DA7EC4; text-shadow: -1px 1px 2px black,
-		1px 1px 2px black,
-		1px -1px 0 black,
-		-1px -1px 0 black; font-weight: bolder; line-height: 12px;">BARBARA</p>
+		<div class="row" style="padding-top: 1rem; padding-bottom: 1rem;">
+		  <div class="col-sm-6 col-md-6 col-lg-3 align-self-center" style="padding-bottom:0;">
+	<section class="logo-section">
+	<div class="my-auto" id="logo">
+		<img src="{% static 'images/logo_white.svg' %}" alt="logo"><br>
+		<p class="footer-logo-salon">{% trans "kozmetični salon" %}</p>
+		<p class="footer-logo-barbara">BARBARA</p>
 	</div>
 </section>
 </div>
 
-	<div class="col-sm-2" style="padding-top: 30px;">
+	<div class="col-sm-6 col-md-6 col-lg-2" style="padding-top: 30px;">
 	<div class="footer-left">
-	<p class="footer_headings">Meni</p>
+	<p class="footer_headings">{% trans "Meni" %}</p>
 	<ul style="list-style-type:none; padding:0; text-align: center;">
-	<li><a class="footer-menu" href="{% url 'barbara:index' %}">Domov</a></li>
-	<li><a class="footer-menu" href="{% url 'barbara:about' %}"><center>O Barbari</center></a></li>
-	<li><a class="footer-menu" href="{% url 'barbara:services' %}"><center>Ponudba</center></a></li>
-	<li><a class="footer-menu" href="{% url 'barbara:contact' %}"><center>Kontakt</center></a></li>
+	<li><a class="footer-menu" href="{% url 'barbara:index' %}">{% trans "Domov" %}</a></li>
+	<li><a class="footer-menu" href="{% url 'barbara:about' %}"><center>{% trans "O Barbari" %}</center></a></li>
+	<li><a class="footer-menu" href="{% url 'barbara:services' %}"><center>{% trans "Ponudba" %}</center></a></li>
+	<li><a class="footer-menu" href="{% url 'barbara:contact' %}"><center>{% trans "Kontakt" %}</center></a></li>
 	</ul>
 </div>
 </div>
 
-<div class="col-sm-4" style="padding-top: 30px;">
+<div class="col-sm-12 col-md-6 col-lg-3" style="padding-top: 30px;">
 <div class="footer-center">
-<div><p class="footer_headings">Odpiralni čas</p>
-<p><center>Po dogovoru.</center></p></div>
+<div><p class="footer_headings">{% trans "Odpiralni čas" %}</p>
+<p><center>{% trans "Po dogovoru" %}.</center></p></div>
 <hr>
 <div><center><img class="icon" src="{% static 'images/navigation.png' %}">Savska cesta 20, 4270 Jesenice, SI</center>
-<a href="{% url 'barbara:contact' %}#navigacija"><center><p class="link-text" style="color: #DA7EC4;">Zemljevid in navodila za pot</p></center></a></div>
+<a href="{% url 'barbara:contact' %}#navigacija"><center><p class="link-text" style="color: #DA7EC4;">{% trans "Zemljevid in navodila za pot" %}</p></center></a></div>
 <hr>
 </div>
 </div>
 
-<div class="col-sm-3" style="padding-top: 30px;">
+<div class="col-sm-12 col-md-6 col-lg-4" style="padding-top: 30px;">
 <div class="footer-right">
-<p class="footer_headings">Kontakt</p>
-<div><img class="icon" src="{% static 'images/call.png' %}"> +386 41 429 948</div>
+<p class="footer_headings">{% trans "Kontakt" %}</p>
+
+<div><img class="icon" src="{% static 'images/call.jpg' %}"><a href="tel:+386 41 429 948" style="color: inherit;"> +386 41 429 948</a></div>
 <br>
-<div><img class="icon" src="{% static 'images/at.png' %}"> barbara.kacin@gmail.com</div>
+<div><img class="icon" src="{% static 'images/at.png' %}"><a href="mailto:barbara.kacin@gmail.com?subject=Rezervacija%20termina" style="color: inherit;"> barbara.kacin@gmail.com</a></div>
 </div>
 </div>
 </div>
 </div>
-<section class="pink-footer">SI / EN</section>
+<p id="pink-footer"><a href="{% url 'set_language_from_url' user_language='sl' %}">SL </a>/<a href="{% url 'set_language_from_url' user_language='en' %}"> EN</a></p>
 </footer>
 </body>
 </html>

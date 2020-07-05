@@ -1,33 +1,86 @@
 {% extends 'barbara/base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block body_block %} 
-<section class="header-section">
-</section>
 
-    <div class="container-fluid">
-		<div class="row">
-		  <div class="col-sm">
-<p>O BARBARI</p>
-<p>Barbara je doštudirala... Kasneje, po X letih practica je svoj interes v well-beingu človeka prenesla v lepotno stran.
-V svojem prostem času rada preživlja čas..
+<nav class="nav">
+  <div class="container-fluid">
+      <div>
+      <a href="{% url 'barbara:index' %}"><img class="img_logo_2" src="{% static 'images/logo_pink.svg' %}" alt="logo"></a>
+      </div>
+    
+    <div id="mainListDiv" class="main_list">
+      <ul class="navlinks" id="black">
+        <li><a href="{% url 'barbara:index' %}">{% trans "Domov" %}</a></li>
+        <li><a class="current" href="{% url 'barbara:about' %}">{% trans "O Barbari" %}</a></li>
+        <li><a href="{% url 'barbara:services' %}">{% trans "Ponudba" %}</a></li>
+        <li><a href="{% url 'barbara:contact' %}">{% trans "Kontakt" %}</a></li>
+      </ul>
+    </div>
+    <span class="navTrigger" id="pink">
+      <i></i>
+      <i></i>
+      <i></i>
+    </span>
+  </div>
+</nav>	
 
-<ul>
-    <li>Potrdilo o udeležbi na delavnici s parfumiranimi permanentnimi laki Parish (2019)</li>
-    <li>Certifikat za master course Combinal Eyelash Lifting (2019)</li>
-    <li>Certifikat za opravljen IBX System Education Program (2017)</li>
-    <li>Certifikat za tečaj Podaljševanje trepalnic (2014)</li>
-    <li>Potrdilo o izobraževanju Barbor tretmani za obraz in telo (2011)</li>
-    <li>Potrdilo o udeležbi seminarja Terapevtska masaža hrbta (2011)</li>
-    <li>Certifikat za udeležbo seminarja Limfna drenaža (2011)</li>
-    <li>Potrdilo o opravljenem tečaju Klinične Aromaterapije po licenci Inštituta Eve Taylor, London (2010)</li>
-    <li>Potrdilo o opravljenem tečaju pedikure Zti kozmetika (Zavod za tehnično izobraževanje) (2001)</li>
-</ul>
-</p>
+<!--- compressed menu function -->
+<script>
+$('.navTrigger').click(function () {
+  $(this).toggleClass('active');
+  console.log("Clicked menu");
+  $("#mainListDiv").toggleClass("show_list");
+  $("#mainListDiv").fadeIn();
+
+});
+</script>
+
+
+<section class="header-section"></section>
+    <div class="container" style="padding-bottom: 2rem;">
+      <p class="main-headings">{% trans "Spoznajte Barbaro" %}</p>
+      <div class="row">
+      <img id="Barbara2" src="{% static 'images/Barbara.jpg' %}" alt="Barbara">
+      <div class="col-12">
+        <img class="float-md-right" id="Barbara" src="{% static 'images/Barbara.jpg' %}" alt="Barbara">
+  <p class="normal-text">{% trans "Barbara profesionalno opravlja vrhunske kozmetične storitve že skoraj 35 let. Pred tem je zaključila srednjo zdravstveno šolo in je sprva delala kot medicinska sestra. Kasneje je svoj interes v dobrobitju človeka prenesla na področje lepote in wellnessa. Na zavodu za tehnično izobraževanje je opravila še 2 leti kozmetične šole in se zaposlila kot kozmetičarka in maserka. Čez leta je nabrala bogate izkušnje v priznanih salonih in svoje znanje redno poglabljala z dodatnimi izobraževanji." %}</p>
+  <p class="normal-text">{% trans "Barbaro je umetniška pot že od nekdaj zanimala, zato v prostem času rada ustvarja. Njena strast je zagotovo risanje s svinčnikom in slikanje z oljem na platno. Ima tudi izjemen obcutek za opremljanje in preoblikovanje. Uživa ob znanstveno-fantastičnih filmih in napetih romanih, ko pa ujame navdih pa napiše tudi kakšen verz." %}</p> 
+  <p class="normal-text">{% trans "Zaradi večletnih izkušenj, umetniškega talenta in občutka za sočloveka ste v kozmetičnem salonu Barbara zagotovo v najboljših rokah." %}</p>
 </div>
-<div class="col-sm">
-<img src="{% static 'images/Barbara.jpeg' %}" height="500px" alt="Barbara">
 </div>
-</div>
+<hr>
+<p class="normal-text">{% trans "Se vidimo!" %}</p>
+  
+<div id="bm"> </div>
+
+<script src="bodymovin.js"></script>
+<script src="js/lottie.js" type="text/javascript"></script>
+
+<script>
+  var animation = bodymovin.loadAnimation({
+  container: document.getElementById('bm'),
+  renderer: 'svg',
+  loop: false,
+  autoplay: true,
+  path: '{% static "js/data.json" %}'
+})
+</script>
+
+<p class="sub-headings">{% trans "Certifikati in izobrazba" %}</p>
+<p class="normal-text" style="margin-left: 0; padding-left: 0;">
+  &#9642&nbsp&nbsp&nbsp{% trans "Potrdilo o udeležbi na delavnici s parfumiranimi permanentnimi laki Parish (2019)" %}<br>
+  &#9642&nbsp&nbsp&nbsp{% trans "Certifikat za master course Combinal Eyelash Lifting" %} (2019)<br>
+  &#9642&nbsp&nbsp&nbsp{% trans "Certifikat za opravljen IBX System Education Program (2017)" %}<br>
+  &#9642&nbsp&nbsp&nbsp{% trans "Certifikat za tečaj Podaljševanje trepalnic" %} (2014)<br>
+  &#9642&nbsp&nbsp&nbsp{% trans "Potrdilo o izobraževanju Barbor tretmani za obraz in telo" %} (2011)<br>
+  &#9642&nbsp&nbsp&nbsp{% trans "Potrdilo o udeležbi seminarja Terapevtska masaža hrbta" %} (2011)<br>
+  &#9642&nbsp&nbsp&nbsp{% trans "Certifikat za udeležbo seminarja Limfna drenaža" %} (2011)<br>
+  &#9642&nbsp&nbsp&nbsp{% trans "Potrdilo o opravljenem tečaju Klinične Aromaterapije po licenci Inštituta Eve Taylor, London" %} (2010)<br>
+  &#9642&nbsp&nbsp&nbsp{% trans "Refleksivna masaža stopal" %} (2003)<br>
+  &#9642&nbsp&nbsp&nbsp{% trans "Potrdilo o opravljenem tečaju pedikure Zti kozmetika (Zavod za tehnično izobraževanje)" %} (2001)<br>
+  &#9642&nbsp&nbsp&nbsp{% trans "Potrdilo o izobrazbi in usposobljenju za poklic kozmetičarke (Zavod za tehnično izobraževanje)" %} (1989)<br>
+  </p>
 </div>
 {% endblock %}
