@@ -22,6 +22,8 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 LOCALE_PATHS = ( os.path.join(BASE_DIR, 'locale'),)
+PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -86,6 +88,7 @@ WSGI_APPLICATION = 'salon.wsgi.application'
 
 DATABASES = {
     'default': {
+        'NAME': os.path.join(PROJECT_PATH,'mysite.sqlite3'),
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
