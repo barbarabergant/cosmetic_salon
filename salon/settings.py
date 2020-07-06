@@ -141,9 +141,10 @@ MEDIA_URL = '/media/'
 
 #Email Settings
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
+EMAIL_PORT = '587'
 EMAIL_HOST_USER = 'barbara.bergant3@gmail.com'
-EMAIL_USE_TLS = False
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = True
 #EMAIL_USE_SSL = False
 
 django_heroku.settings(locals())
