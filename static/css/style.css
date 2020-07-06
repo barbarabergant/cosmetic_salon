@@ -209,6 +209,10 @@ screen and (max-height:536px)
   align-items: center;
 }
 
+video::-webkit-media-controls {
+  display: none;
+}
+
 footer {
   background: #3c3c3c;
   color:  #ffffff;
