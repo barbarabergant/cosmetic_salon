@@ -34,7 +34,7 @@ SECRET_KEY = 's6(^9nw=9r4lu$j+bb0o!3v!u5tgb-nxp*)p*=1v=^*4^djo_x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1', 'www.kozmetika-barbara.com', 'kozmetika-barbara.com', 'salonbarbara.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'kozmetika-barbara.com', 'salonbarbara.herokuapp.com']
 
 LOGGING = {
     'version': 1,
@@ -156,7 +156,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [STATIC_DIR, ]
 
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
 
