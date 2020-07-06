@@ -28,7 +28,16 @@ def contact(request):
 
             sender = "Poizvedba " + sender_name + " " + "<" + sender_number + ">"
             
-            send_mail(sender, message, sender_email, ['barbara.bergant3@gmail.com'])
+            #send_mail(sender, message, sender_email, ['barbara.bergant3@gmail.com'])
+            from django.core.mail import EmailMessage
+            email = EmailMessage(
+                    sender,
+                    message,
+                    sender_email,
+                    ['barbara.bergant3@gmail.com'],
+                    reply_to=[sender_email],
+                )
+            email.send(fail_silently=False)
             return render(request, 'barbara/contact.html', {'sender_name': sender_name})
     else:
         form = ContactForm()
@@ -36,7 +45,7 @@ def contact(request):
 
 def services(request):
     return render(request, 'barbara/services.html')
-    
+
 def set_language_from_url(request, user_language):
     translation.activate(user_language)
     request.session[translation.LANGUAGE_SESSION_KEY] = user_language
