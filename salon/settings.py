@@ -108,7 +108,6 @@ DATABASES = {
     'default': {
         'NAME': os.path.join(PROJECT_PATH,'mysite.sqlite3'),
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -157,8 +156,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [STATIC_DIR, ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
