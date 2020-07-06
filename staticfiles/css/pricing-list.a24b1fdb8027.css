@@ -1,0 +1,83 @@
+@media only screen and (min-width: 768px) {
+  .pricing-list .services_section_style {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  ul.leaders li {
+    font-size: 18px; 
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  ul.leaders li {
+    font-size: 17px;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .pricing-list .services_section_style {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .pricing-list .services_section_style {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+}
+
+.pricing-heading {
+  background-color: rgba(0, 0, 0, 0.781);
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 23px;
+}
+
+@media screen and (max-width:576px) {
+  .pricing-heading {
+    font-size: 19px;
+  }
+}
+
+
+
+.heading-1 {
+  font-size: 30px;
+  color: black;
+  text-align: center;
+}
+
+ul.leaders {
+	padding: 0;
+}
+ul.leaders li {
+  display: table;
+  color: black;
+}
+ul.leaders li span {
+	display:     table-cell;
+}
+ul.leaders li span:first-child {
+  position: relative;
+	overflow: hidden;            /* Don't go underneath the price */
+}
+ul.leaders li span:first-child:after { /* dotts */
+	content:        "";
+	position:       absolute;
+	bottom:         0.2em;       /* Set as you want */       
+	margin-left:    0.5em;       /* Keep same for the next span's left padding */
+	width:          100%;
+	border-bottom:  1.5px dotted #000;
+}
+ul.leaders li span + span {
+	text-align:     right;
+	width:          1%;          /* Trick it */
+	vertical-align: bottom;      /* Keep Price text bottom-aligned */
+	padding-left:   0.5em;
+}

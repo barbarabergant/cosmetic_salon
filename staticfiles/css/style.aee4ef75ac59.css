@@ -1,0 +1,688 @@
+html {
+  height: 100%;
+  width: calc(100vw - (100vw - 100%));
+  box-sizing: border-box;  
+}
+
+body {
+  position: relative;
+   margin: 0;
+   min-height: 100%;
+   width: calc(100vw - (100vw - 100%));
+   font-family: 'Montserrat', sans-serif;
+}
+
+#bm {
+  width: 50%;
+  height: 50%;
+  margin-left: 10%;
+}
+
+@media screen and (max-width:750px){
+  #bm {
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+  }
+
+}
+
+a:-webkit-any-link{
+  text-decoration:none !important;
+}
+
+video {
+  position: absolute;
+  object-fit: cover;
+  width: calc(100vw - (100vw - 100%));
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index:-1;
+  object-position: center;
+  overflow: hidden;
+}
+
+.video-section::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  z-index: 0;
+  height: 100vh;
+  width: calc(100vw - (100vw - 100%));
+  /* Any overlay color that you want, here I use black with 25% opacity */
+  background-color: rgba(0,0,0,0.25);
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .video-section { position: relative;}
+  .video { position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    overflow: hidden; }
+}
+
+video-section {
+  display: inline;
+}
+
+video-label {
+  display: flex;         
+  flex-direction: column;
+  align-items: center;
+}
+
+.img_logo {
+  height: 150px;
+  width: auto;
+  padding-bottom: 40px;
+}
+
+.img_logo_2 {
+  height: 80px;
+  width: auto;
+  float: left;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+
+@media screen and (max-width:768px) {
+  .img_logo_2 {
+    height: 60px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+.welcome-text {
+  z-index: 15;
+  text-align: center;
+}
+
+div.welcome-text p.a {
+  font-size: 25px;
+  color: white;
+  font-weight: 900;
+}
+
+div.welcome-text span.b {
+  font-family: 'Charmonman', cursive; 
+  font-size: 50px; 
+  color: white;
+  line-height: 20px;
+  font-weight: 900;
+}
+
+div.welcome-text span.c { 
+  font-size: 50px; 
+  color: #DA7EC4; 
+  font-weight: 900;
+  line-height: 50px;
+  -webkit-text-stroke-width: 1px; 
+  -webkit-text-stroke-color: #DA7EC4;
+}
+
+button.book_button {
+  background-color: #DA7EC4;
+  border: none;
+  text-decoration: none !important;
+  text-transform: lowercase;
+  color: white;
+  z-index: 30;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 50px;
+  border-radius: 40px;
+  display: inline-block;
+}
+
+button.book_button#other {
+  font-size: 25px;
+  width: auto;
+  
+}
+
+button {
+  cursor: pointer;
+ }
+
+button:hover {
+  background-color: white; 
+  color: #DA7EC4;
+  -webkit-text-stroke-color: #DA7EC4;
+  -webkit-text-stroke-width: 1px;
+}
+
+button.book_button#reservation-box {
+  font-size: 18px;
+  width: 280px;
+}
+
+@media screen and (max-width:610px), 
+screen and (max-height:536px) 
+{
+  .img_logo {
+    height: 120px;
+    width: auto;
+  }
+
+  div.welcome-text p.a {
+    font-size: 21px;
+    line-height: 21px;
+    
+  }
+
+  div.welcome-text span.b {
+    margin-top: -20px;
+    font-size: 31px; 
+    line-height: 20px;
+  }
+  
+  div.welcome-text span.c { 
+    font-size: 31px; 
+    line-height: 20px;
+  }
+
+  button.book_button {
+    font-size: 12px;
+    width: 230px;
+    height: 40px;
+  }
+}
+
+.video-label {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+video::-webkit-media-controls {
+  display: none;
+}
+
+footer {
+  background: #3c3c3c;
+  color:  #ffffff;
+  width: calc(100vw - (100vw - 100%));
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.footer-left .a {
+	color:  #ffffff;
+}
+
+.footer-left .a:hover {
+  font-weight: bold;
+}
+
+ 
+.footer-left a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color: inherit;
+}
+
+.footer_headings {
+  text-align: center; 
+  font-family: 'Charmonman', cursive; 
+  font-size: 23px; 
+  line-height: 21px;
+  text-transform: lowercase;
+  font-weight: 100;
+}
+
+img.icon {
+  height: 23px;
+  width: 23px;
+}
+
+.circular--square {
+  border-radius: 100%;
+  height: 230px;
+  width: 230px;
+}
+
+#img-text {
+  z-index: 100;
+  font-size: 24px;
+  font-weight: bold;
+  left: 50px;
+  top: 350px;
+}
+
+p.offer-shortcuts {
+  position: absolute;
+  bottom: 65px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 49px;
+  color: white;
+  opacity: 0.8;
+  font-weight: 900;
+  text-transform: lowercase;
+  }
+
+a.offer-container:hover img.circular--square {
+  transform: scale(1.1);
+}
+
+a.offer-container:hover p.offer-shortcuts {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 270px) and (max-width:768px) {
+  .circular--square {
+    height: 250px;
+    width: 250px;
+  }
+
+  p.offer-shortcuts {
+    bottom: 76px;
+    font-size: 48px;
+    }
+}
+
+@media screen and (max-width:270px) {
+  .circular--square {
+    height: 200px;
+    width: 200px;
+  }
+
+  p.offer-shortcuts {
+    bottom: 60px;
+    font-size: 37px;
+    }
+}
+
+div#about-section {
+  background-color: rgba(119, 106, 106, 0.178);
+  padding: 2rem;
+  margin-bottom: 50px;
+}
+
+div#contact-shortcut {
+  background-color: rgba(119, 106, 106, 0.178);
+  padding: 2rem;
+  margin-top: 50px;
+  margin-left:0;
+  margin-right: 0;
+}
+
+p.about-text {
+  font-size: 35px;
+  color: #DA7EC4;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #DA7EC4;
+  line-height: 50px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  p.about-text, #reservation-box .two, .sub-headings, .main-headings, .footer-logo-barbara, div.welcome-text span.c {
+    font-weight: lighter;
+    text-shadow:
+    -1px -1px 0 #DA7EC4,  
+      1px -1px 0 #DA7EC4,
+      -1px 1px 0 #DA7EC4,
+      1px 1px 0 #DA7EC4;
+  }
+}
+
+@media screen and (max-width:576px) {
+  p.about-text {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+
+.section_style {
+  background-color: rgba(218, 126, 197, 0.514);
+  position: relative;
+}
+
+#reservation-section {
+  background-color: rgba(218, 126, 197, 0.514);
+}
+
+#reservation-box .one {
+  font-size: 24px;
+  color: white;
+  margin-bottom: -5px;
+  font-family: 'Charmonman', cursive;
+}
+
+#reservation-box .two {
+  font-size: 40px;
+  -webkit-text-stroke: 2px #DA7EC4;
+  color: #DA7EC4;
+  margin-bottom: -10px;
+}
+
+#reservation-box .three {
+  font-size: 20px;
+  color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.438);
+}
+
+#reservation-box {
+  text-align: center;
+  width: calc(100vw - (100vw - 100%));
+}
+
+@media screen and (min-width: 992px) {
+  .reservation-image {
+    width: 50vw; 
+    margin-left: -15px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .reservation-image {
+  width: calc(100vw - (100vw - 100%));
+  margin:0;
+  padding: 0;
+  }
+}
+
+@media screen and (max-width: 1279px) { 
+  #reservation-box .two {
+    font-size: 35px;
+  }
+
+  #reservation-box .one {
+    font-size: 19px;
+  }
+
+  #reservation-box .three {
+    font-size: 15px;
+    margin-bottom: -5px;
+  }
+
+  button.book_button#reservation-box {
+    font-size: 15px;
+    width: 230px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width:991px) and (max-width:1100px) {
+  form.number button#reservation-box {
+    width: 200px;
+  }
+
+  form.email button#reservation-box {
+    margin-left: -8px;
+  }
+}
+
+@media screen and (min-width: 765px) and (max-width: 991px) {
+  form.number button#reservation-box {
+    margin-right: -2rem;
+  }
+
+  form.email button#reservation-box {
+    margin-left: -2rem;
+  }
+}
+
+img#Barbara, img#Barbara2 {
+  margin: 0 0 15px 15px;
+  border-radius: 100%;
+  height: 350px;
+  width: 350px;
+}
+
+#svg_sig {
+  width: 370px;
+  height: auto;
+  margin-right: 0;
+}
+
+@media screen and (max-width: 992px) {
+  img#Barbara, img#Barbara2 {
+    width:250px;
+    height:250px;
+  }
+
+  #svg_sig {
+    width: 200px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  img#Barbara {
+    display: none;
+  }
+
+  img#Barbara2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+}
+
+@media screen and (min-width: 769px) {
+  img#Barbara2 {
+    display: none;
+  }
+}
+
+.intext {
+  margin: 15px 0;
+}
+
+/* up button */
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 24px;
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #907d6d; /* Set a background color */
+  opacity: 0.6;
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  right: 0;
+  font-size:24px;
+  z-index: 15;
+  width: 3rem;
+  height: 4rem;
+  text-align: center;
+}
+
+#myBtn:hover {
+  background-color: #907d6d; /* Add a dark-grey background on hover */
+  opacity: 1;
+}
+
+img.contact {
+  width: calc(100vw - (100vw - 100%));
+  height: auto;
+}
+
+.map {
+  text-align: center;
+}
+
+.normal-text {
+  font-size: 18px; 
+  font-weight: bold;
+}
+
+.p {
+  font-family: 'Lora', serif;
+  size: 17px;
+}
+
+.form {
+  margin-right: 0;
+  max-height: fit-content;
+  align-items: stretch;
+  
+}
+
+.form-control {
+  border-color: rgb(153, 153, 153);
+  border-width: 1px;
+  background: rgba(253, 253, 253, 0.3);
+}
+
+.form-control:focus {
+  border-color: #DA7EC4;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px #DA7EC4;
+  background: rgba(253, 253, 253, 0.8);
+}
+
+img.contact-me-small {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  #contact-me-section {
+    background-image: url("/static/images/woman.9e89c402f2e6.jpg");
+    object-fit: cover;
+    background-size: cover;
+  }
+
+  img.contact-me-small {
+    display: none;
+  }
+}
+
+p.contact-headings {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom:0px;
+}
+
+a.footer-menu:hover {
+  color: #DA7EC4;
+}
+
+.hr {
+  color: black;
+  border: 5px solid black;
+}
+
+.footer-center .div img#icon {
+  color: #DA7EC4;
+}
+
+.logo-section, .footer-right {
+  text-align: center;
+}
+
+.footer-logo-barbara {
+  font-size: 32px; 
+  color: #DA7EC4; 
+  font-weight: bolder; 
+  line-height: 14px;
+  -webkit-text-stroke-width: 1px; 
+  -webkit-text-stroke-color: #DA7EC4;
+}
+
+.footer-logo-salon {
+font-family: 'Charmonman', cursive; 
+font-size: 22px; 
+line-height: 27px;
+}
+
+#pink-footer {
+  width: calc(100vw - (100vw - 100%));
+  background-color: #DA7EC4;
+  height: 25px;
+  margin: 0;
+  text-align: right;
+  float: right;
+  padding-right: 10px;
+  padding-bottom: 2px;
+}
+
+.language {
+  padding-top: 5px;
+  color: #ffffff;
+}
+
+.language a:hover {
+  color: #DA7EC4;
+  font-weight: bolder;
+}
+
+.language a, #pink-footer a {
+  color: inherit;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#pink-footer a:hover {
+  color: #3c3c3c;
+  font-weight: bolder;
+}
+
+button.book_button:active, button.book_button:hover, button.book_button:focus {
+  border: none;
+  outline: none;
+}
+
+.footer-salon {
+  font-family: 'Charmonman', cursive; 
+  font-size: 22px; 
+  line-height: 15px;
+  text-decoration:none !important;
+}
+
+#navigacija .google_map {
+  height: 45vh;
+  width: calc(100vw - (100vw - 100%));
+  border: none;
+}
+
+.main-headings {
+  font-size: 50px;
+  color: #DA7EC4;
+  font-weight: 900;
+  padding-top: 5.5rem;
+}
+
+.sub-headings {
+  font-size: 35px;
+  color: #DA7EC4;
+  font-weight: 900;
+}
+
+@media screen and (max-width:576px) {
+  .main-headings {
+    font-size: 35px;
+  }
+
+  .sub-headings {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width:600px) and (max-width:1260px) {
+  p.normal-text #services {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
