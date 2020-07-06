@@ -24,7 +24,7 @@ def contact(request):
             sender_email = form.cleaned_data['email']
             sender_number = form.cleaned_data['number']
             feedback = form.cleaned_data['reputation']
-            message = "To sporočilo je bilo poslano iz spletne strani.\n\n" + "Ime in priimek: " + sender_name + "\nTelefon: " + sender_number + "\nE-pošta: " + sender_email + "\n\nSporočilo:\n" + form.cleaned_data['message'] + "\n\n\nSlišal/-a sem zate preko:" + str(feedback)
+            message = "To sporočilo je bilo poslano preko spletne strani.\n\n" + "Ime in priimek: " + sender_name + "\nTelefon: " + sender_number + "\nE-pošta: " + sender_email + "\n\nSporočilo:\n" + form.cleaned_data['message'] + "\n\n\nSlišal/-a sem zate preko:" + str(feedback)
 
             sender = "Poizvedba " + sender_name + " " + "<" + sender_number + ">"
             
