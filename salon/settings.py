@@ -34,7 +34,7 @@ SECRET_KEY = 's6(^9nw=9r4lu$j+bb0o!3v!u5tgb-nxp*)p*=1v=^*4^djo_x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'www.kozmetika-barbara.com', 'kozmetika-barbara.com', 'salonbarbara.herokuapp.com']
+ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1', 'www.kozmetika-barbara.com', 'kozmetika-barbara.com', 'salonbarbara.herokuapp.com']
 
 # Application definition
 
