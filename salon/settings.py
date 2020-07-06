@@ -21,9 +21,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-LOCALE_PATHS = ( os.path.join(BASE_DIR, 'locale'),)
-PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
-
+LOCALE_PATHS = [ os.path.join(BASE_DIR, 'locale'),]
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -32,27 +30,9 @@ PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = 's6(^9nw=9r4lu$j+bb0o!3v!u5tgb-nxp*)p*=1v=^*4^djo_x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'kozmetika-barbara.com', 'salonbarbara.herokuapp.com']
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console'],
-             'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
-        },
-    },
-}
-
-DEBUG_PROPAGATE_EXCEPTIONS = True
+ALLOWED_HOSTS = ['kozmetika-barbara.com', 'salonbarbara.herokuapp.com/']
 
 # Application definition
 
@@ -106,8 +86,8 @@ WSGI_APPLICATION = 'salon.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': os.path.join(PROJECT_PATH,'mysite.sqlite3'),
         'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -136,7 +116,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'sl'
 LANGUAGES = [ ('en', 'English'), ('sl', 'Slovenščina'), ]
-
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
@@ -145,19 +124,14 @@ USE_L10N = True
 
 USE_TZ = True
 
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.core.context_processors.i18n',
-)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [STATIC_DIR, ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
