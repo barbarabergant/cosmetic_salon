@@ -30,7 +30,7 @@ LOCALE_PATHS = [ os.path.join(BASE_DIR, 'locale'), ]
 SECRET_KEY = 's6(^9nw=9r4lu$j+bb0o!3v!u5tgb-nxp*)p*=1v=^*4^djo_x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -140,17 +140,14 @@ MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
 #Email Settings
-if not DEBUG:
-      EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-      EMAIL_HOST_USER = "barbara.bergant3@gmail.com"
-      EMAIL_HOST = 'smtp.gmail.com'
-      EMAIL_PORT = 587
-      EMAIL_USE_TLS = True
-      EMAIL_HOST_PASSWORD = "barbara3ari"
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST_USER = "barbara.bergant3@gmail.com"
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_PASSWORD = "barbara3ari"
  
-else:
-    EMAIL_BACKEND = (
-        "django.core.mail.backends.console.EmailBackend"
-    )
+
 
 django_heroku.settings(locals())
