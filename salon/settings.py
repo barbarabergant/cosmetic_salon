@@ -141,6 +141,7 @@ MEDIA_URL = '/media/'
 
 #Email Settings
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST_USER = 'barbara.bergant3@gmail.com'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
