@@ -37,7 +37,13 @@ def contact(request):
 def services(request):
     return render(request, 'barbara/services.html')
 
+from django.utils import translation
+from django import http
+from django.conf import settings
+
 def set_language_from_url(request, user_language):
     translation.activate(user_language)
     request.session[translation.LANGUAGE_SESSION_KEY] = user_language
+    response = http.HttpResponse(...)
+    response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
