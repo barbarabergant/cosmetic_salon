@@ -34,7 +34,7 @@ def contact(request):
                     sender,
                     message,
                     sender_email,
-                    ['barbara.zvezdica@gmail.com'],
+                    ['barbara.kacin@gmail.com'],
                     reply_to=[sender_email],
                 )
             email.send(fail_silently=False)
