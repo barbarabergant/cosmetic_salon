@@ -14,6 +14,7 @@ import os
 import django_heroku
 import dj_database_url
 from decouple import config
+import environ
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,8 +30,13 @@ LOCALE_PATHS = [ os.path.join(BASE_DIR, 'locale'),]
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 's6(^9nw=9r4lu$j+bb0o!3v!u5tgb-nxp*)p*=1v=^*4^djo_x'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+env = environ.Env(
+    DEBUG=(bool, False)
+)
+
+environ.Env.read_env()
+
+DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = ['kozmetika-barbara.com', 'salonbarbara.herokuapp.com/']
 
