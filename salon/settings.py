@@ -28,14 +28,13 @@ LOCALE_PATHS = [ os.path.join(BASE_DIR, 'locale'),]
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 's6(^9nw=9r4lu$j+bb0o!3v!u5tgb-nxp*)p*=1v=^*4^djo_x'
-
 env = environ.Env(
     DEBUG=(bool, False)
 )
 
 environ.Env.read_env()
 
+SECRET_KEY = DEBUG = env('SECRET_KEY')
 DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = ['kozmetika-barbara.com', 'salonbarbara.herokuapp.com/']
@@ -152,6 +151,6 @@ EMAIL_HOST_USER = 'barbara.bergant3@gmail.com'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_PASSWORD = 'barbara3ari'
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
  
 django_heroku.settings(locals())
