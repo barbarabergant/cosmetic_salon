@@ -30,7 +30,7 @@ LOCALE_PATHS = [ os.path.join(BASE_DIR, 'locale'),]
 SECRET_KEY = 's6(^9nw=9r4lu$j+bb0o!3v!u5tgb-nxp*)p*=1v=^*4^djo_x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['kozmetika-barbara.com', 'salonbarbara.herokuapp.com/']
 
