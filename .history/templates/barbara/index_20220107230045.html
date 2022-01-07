@@ -1,0 +1,113 @@
+{% extends 'barbara/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body_block %} 
+
+<nav class="nav">
+
+    <div class="container-fluid">
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks" id="white">
+                <li><a class="current" href="{% url 'barbara:index' %}">{% trans "Domov" %}</a></li>
+                <li><a href="{% url 'barbara:about' %}">{% trans "O Barbari" %}</a></li>
+                <li><a href="{% url 'barbara:services' %}">{% trans "Ponudba" %}</a></li>
+                <li><a href="{% url 'barbara:contact' %}">{% trans "Kontakt" %}</a></li>
+            </ul>
+        </div>
+        <span class="navTrigger" id="white">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+    </div>
+</nav>	
+
+<!--- compressed menu function -->
+<script>
+$('.navTrigger').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu");
+    $("#mainListDiv").toggleClass("show_list");
+    $("#mainListDiv").fadeIn();
+
+});
+</script>
+
+<div class="container-fluid">
+<div class="video-section">
+<video loop="true" autoplay="autoplay" controls muted>
+    <source src="{% static 'images/breezy_girl.mp4' %}" type="video/mp4;codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
+</video>
+<div class="video-label">
+    <div class="welcome-text">
+        <a href="{% url 'barbara:index' %}"><img class="img_logo" src="{% static 'images/logo_white.svg' %}" alt="logo"></a>
+        <p><span class="b">{% trans "kozmetični salon" %}</span><p>
+        <p><span class="c">BARBARA</span></p>
+        <p class="a">{% trans "Dobrodošli!" %}</p>
+        
+        <form><button class="book_button" formaction="{% url 'barbara:contact' %}" id="other">{% trans "Naročite se" %}</button></form>
+    
+</div>
+
+</div>
+
+<section style="margin-bottom: 5rem;">
+<p class="sub-headings" style="margin-top: 3rem; text-align: center;">{% trans "Ponudba" %}</p>
+<p class="normal-text" style="text-align: center; margin-top:-10px;">{% trans "Oglejte si raznoliko ponudbo storitev za celotno telo." %}</p>
+<div class="row justify-content-center md-ml-6 md-mr-6" style="padding-top: 15px;">
+    <div class="col-auto" style="position: relative;">
+    <a class="offer-container" href="{% url 'barbara:services' %}#obraz"><img class="circular--square" src="{% static 'images/obraz.jpeg' %}" alt="obraz">
+    <p class="offer-shortcuts">{% trans "OBRAZ" %}</p></a>
+</div>
+<div class="col-auto" style="position: relative;">
+    <a class="offer-container" href="{% url 'barbara:services' %}#roke"><img class="circular--square" src="{% static 'images/roke.jpeg' %}" alt="roke">
+    <p class="offer-shortcuts">{% trans "ROKE" %}</p></a>
+</div>
+<div class="col-auto">
+    <a class="offer-container" href="{% url 'barbara:services' %}#noge"><img class="circular--square" src="{% static 'images/noge.jpeg' %}" alt="noge">
+    <p class="offer-shortcuts">{% trans "NOGE" %}</p></a>
+</div>
+<div class="col-auto">
+    <a class="offer-container" href="{% url 'barbara:services' %}#depilacije"><img class="circular--square" src="{% static 'images/depilacije.jpeg' %}" alt="depilacije">
+    <p class="offer-shortcuts">{% trans "DEPILACIJE" %}</p></a>
+</div>
+<div class="col-auto">
+    <a class="offer-container" href="{% url 'barbara:services' %}#masaze"><img class="circular--square" src="{% static 'images/masaze.jpeg' %}" alt="masaze">
+    <p class="offer-shortcuts">{% trans "MASAŽE" %}</p></a>
+</div>
+</div>
+</section>
+</div>
+
+
+<div id="about-section" class="row justify-content-center">
+    <p class="about-text">{% trans "Spoznajte Barbaro." %}&nbsp&nbsp</p>  
+    <form><button formaction="{% url 'barbara:about' %}" class="book_button" id="other">{% trans "preberi več" %}</button></form>
+</div>
+
+    <div class="row" id="reservation-section">
+            <img class="reservation-image" src="{% static 'images/planner.jpg' %}" alt="serum">
+        <div class="col-lg align-self-center" style="padding-top: 1rem; padding-bottom: 1rem;" id="reservation-box">
+                <p class="one">{% trans "vabljeni" %}!<br></p>
+                <p class="two">{% trans "rezervirajte termin" %}</p>
+                <hr width="80%">
+                <p class="three">{% trans "Barbarin delovnik poteka po dogovoru" %}. <br> {% trans "Naročite se prek telefona ali e-maila" %}.<br><br></p>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <form class="number">
+                            <button formaction="tel:+386 41 429 948" class="book_button" id="reservation-box">+386 41 429 948</button>
+                        </form>
+                    </div>
+                    <div class="col-sm-6">
+                        <form class="email">
+                            <button formaction="mailto:barbara.kacin@gmail.com?subject=Rezervacija%20termina" class="book_button" id="reservation-box">
+                                barbara.kacin@gmail.com</button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

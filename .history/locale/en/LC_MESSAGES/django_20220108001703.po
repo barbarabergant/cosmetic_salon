@@ -1,0 +1,629 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-07 23:07+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\barbara\forms.py:8
+msgid "Izberi..."
+msgstr "Choose..."
+
+#: .\barbara\forms.py:12
+msgid "prijatelj/znanec"
+msgstr "friend/acquaintance"
+
+#: .\barbara\forms.py:13
+msgid "drugo"
+msgstr "other"
+
+#: .\barbara\forms.py:17
+msgid "Ime in priimek"
+msgstr "Full name"
+
+#: .\barbara\forms.py:18
+msgid "Telefonska številka"
+msgstr "Phone number"
+
+#: .\barbara\forms.py:19 .\templates\barbara\contact.html:69
+msgid "E-pošta"
+msgstr "E-mail"
+
+#: .\barbara\forms.py:20
+msgid "Kako si slišal zame"
+msgstr "How'd you hear about me?"
+
+#: .\barbara\forms.py:21
+msgid "Sporočilo"
+msgstr "Message"
+
+#: .\barbara\forms.py:37
+msgid "Pošlji"
+msgstr "Send"
+
+#: .\barbara\views.py:52
+msgid "hello"
+msgstr ""
+
+#: .\salon\settings.py:124
+msgid "English"
+msgstr ""
+
+#: .\salon\settings.py:125
+msgid "Slovenščina"
+msgstr ""
+
+#: .\templates\barbara\about.html:15 .\templates\barbara\base.html:85
+#: .\templates\barbara\contact.html:16 .\templates\barbara\index.html:12
+#: .\templates\barbara\services.html:17
+msgid "Domov"
+msgstr "Home"
+
+#: .\templates\barbara\about.html:16 .\templates\barbara\base.html:86
+#: .\templates\barbara\contact.html:17 .\templates\barbara\index.html:13
+#: .\templates\barbara\services.html:18
+msgid "O Barbari"
+msgstr "About"
+
+#: .\templates\barbara\about.html:17 .\templates\barbara\base.html:87
+#: .\templates\barbara\contact.html:18 .\templates\barbara\index.html:14
+#: .\templates\barbara\index.html:56 .\templates\barbara\services.html:19
+msgid "Ponudba"
+msgstr "Services"
+
+#: .\templates\barbara\about.html:18 .\templates\barbara\base.html:88
+#: .\templates\barbara\base.html:119 .\templates\barbara\contact.html:19
+#: .\templates\barbara\contact.html:49 .\templates\barbara\index.html:15
+#: .\templates\barbara\services.html:20
+msgid "Kontakt"
+msgstr "Contact"
+
+# ABOUT PAGE
+#: .\templates\barbara\about.html:43
+msgid "Spoznajte Barbaro"
+msgstr "Meet Barbara"
+
+#: .\templates\barbara\about.html:48
+msgid ""
+"Barbara profesionalno opravlja vrhunske kozmetične storitve že skoraj 35 "
+"let. Pred tem je zaključila srednjo zdravstveno šolo in je sprva delala kot "
+"medicinska sestra. Kasneje je svoj interes v dobrobitju človeka prenesla na "
+"področje lepote in wellnessa. Na zavodu za tehnično izobraževanje je "
+"opravila še 2 leti kozmetične šole in se zaposlila kot kozmetičarka in "
+"maserka. Čez leta je nabrala bogate izkušnje v priznanih salonih in svoje "
+"znanje redno poglabljala z dodatnimi izobraževanji."
+msgstr ""
+"Barbara has been performing high quality cosmetic services for nearly 35 "
+"years. She started out her career as a nurse after completing a High School "
+"for Health Professions. Later on, she shifted her interest in care and "
+"healing to the beauty and wellness field. She completed additional 2 years "
+"of cosmetic school at the Institute for Technical Education and later got a "
+"job as a cosmetician and masseur. She has acquired a wealth of experience "
+"throughout the years and is consistently improving her skillset with "
+"additional training and education."
+
+#: .\templates\barbara\about.html:49
+msgid ""
+"Barbaro je umetniška pot že od nekdaj zanimala, zato v prostem času rada "
+"ustvarja. Njena strast je zagotovo risanje s svinčnikom in slikanje z oljem "
+"na platno. Ima tudi izjemen obcutek za opremljanje in preoblikovanje. Uživa "
+"ob znanstveno-fantastičnih filmih in napetih romanih, ko pa ujame navdih pa "
+"napiše tudi kakšen verz."
+msgstr ""
+"She has always been interested in art, and for this reason she loves to be "
+"creative in her free time. Her biggest passions are certainly pencil drawing "
+"and oil painting on canvas. She has an exceptional touch for furnishing and "
+"design. She also enjoys sci-fi movies and suspenseful novels. She will even "
+"write a verse or two when she gets inspired."
+
+#: .\templates\barbara\about.html:50
+msgid ""
+"Zaradi večletnih izkušenj, umetniškega talenta in občutka za sočloveka ste v "
+"kozmetičnem salonu Barbara zagotovo v najboljših rokah."
+msgstr ""
+"Barbara’s creative talent and years of experience make cosmetic salon "
+"Barbara the best fit for your beauty needs."
+
+#: .\templates\barbara\about.html:54
+msgid "Se vidimo!"
+msgstr "See you soon!"
+
+#: .\templates\barbara\about.html:71
+msgid "Certifikati in izobrazba"
+msgstr "Certificates and education"
+
+#: .\templates\barbara\about.html:73
+msgid ""
+"Potrdilo o udeležbi na delavnici s parfumiranimi permanentnimi laki Parish "
+"(2019)"
+msgstr ""
+"Certificate of participation in a workshop with perfumed permanent nail "
+"polishes Parish (2019)"
+
+#: .\templates\barbara\about.html:74
+msgid "Certifikat za master course Combinal Eyelash Lifting"
+msgstr "Certificate of completion of Combinal Eyelash Lifting master course"
+
+#: .\templates\barbara\about.html:75
+msgid "Certifikat za opravljen IBX System Education Program (2017)"
+msgstr "Certificate of completion of IBX System Education Program (2017)"
+
+#: .\templates\barbara\about.html:76
+msgid "Certifikat za tečaj Podaljševanje trepalnic"
+msgstr "Certificate of completion of Eyelash lenghtening course"
+
+#: .\templates\barbara\about.html:77
+msgid "Potrdilo o izobraževanju Barbor tretmani za obraz in telo"
+msgstr "Completed course on Barbor treatments for face and body"
+
+#: .\templates\barbara\about.html:78
+msgid "Potrdilo o udeležbi seminarja Terapevtska masaža hrbta"
+msgstr "Certification of participation at Therapeutic back massage seminar"
+
+#: .\templates\barbara\about.html:79
+msgid "Certifikat za udeležbo seminarja Limfna drenaža"
+msgstr "Certification of participation at Lymph drainage seminar"
+
+#: .\templates\barbara\about.html:80
+msgid ""
+"Potrdilo o opravljenem tečaju Klinične Aromaterapije po licenci Inštituta "
+"Eve Taylor, London"
+msgstr ""
+"Certificate of completion of Clinical Aromatherapy course under the "
+"Institute of Eve Taylor, London licence"
+
+#: .\templates\barbara\about.html:81
+msgid "Refleksivna masaža stopal"
+msgstr "Reflexive foot massage"
+
+#: .\templates\barbara\about.html:82
+msgid ""
+"Potrdilo o opravljenem tečaju pedikure Zti kozmetika (Zavod za tehnično "
+"izobraževanje)"
+msgstr ""
+"Certificate of completion of pedicure Ite cosmetics course (Institute for "
+"Technical Education)"
+
+#: .\templates\barbara\about.html:83
+msgid ""
+"Potrdilo o izobrazbi in usposobljenju za poklic kozmetičarke (Zavod za "
+"tehnično izobraževanje)"
+msgstr "Degree in cosmetics (Institute for Technical Education)"
+
+# HOME PAGE
+#: .\templates\barbara\base.html:75 .\templates\barbara\index.html:45
+msgid "kozmetični salon"
+msgstr "cosmetic salon"
+
+#: .\templates\barbara\base.html:83
+msgid "Meni"
+msgstr "Menu"
+
+#: .\templates\barbara\base.html:108 .\templates\barbara\contact.html:81
+msgid "Odpiralni čas"
+msgstr "Opening hours"
+
+#: .\templates\barbara\base.html:109 .\templates\barbara\contact.html:82
+#: .\templates\barbara\services.html:119
+msgid "Po dogovoru"
+msgstr "Subject to prior agreement"
+
+#: .\templates\barbara\base.html:112
+msgid "Zemljevid in navodila za pot"
+msgstr "Map & directions"
+
+#: .\templates\barbara\contact.html:57
+msgid "Telefon"
+msgstr "Phone"
+
+#: .\templates\barbara\contact.html:90
+msgid "Piši mi"
+msgstr "Send me a message"
+
+#: .\templates\barbara\contact.html:92
+msgid "Hvala za sporočilo! Odgovorili bomo v najkrajšem možnem času"
+msgstr ""
+"Thank you for your message! We will get back to you in as soon as possible"
+
+#: .\templates\barbara\contact.html:107
+msgid "Kje me najdeš"
+msgstr "Where to find me"
+
+#: .\templates\barbara\index.html:47
+msgid "Dobrodošli!"
+msgstr "Welcome!"
+
+#: .\templates\barbara\index.html:49
+msgid "Naročite se"
+msgstr "Book now"
+
+#: .\templates\barbara\index.html:57
+msgid "Oglejte si raznoliko ponudbo storitev za celotno telo."
+msgstr ""
+"Take a closer look at the wide range of services offered for the whole body."
+
+#: .\templates\barbara\index.html:61
+msgid "OBRAZ"
+msgstr "FACE"
+
+#: .\templates\barbara\index.html:65
+msgid "ROKE"
+msgstr "HANDS"
+
+#: .\templates\barbara\index.html:69
+msgid "NOGE"
+msgstr "LEGS"
+
+#: .\templates\barbara\index.html:73
+msgid "DEPILACIJE"
+msgstr "WAXING"
+
+#: .\templates\barbara\index.html:77
+msgid "MASAŽE"
+msgstr "MASSAGE"
+
+#: .\templates\barbara\index.html:85
+msgid "Spoznajte Barbaro."
+msgstr "Meet Barbara"
+
+#: .\templates\barbara\index.html:86
+msgid "preberi več"
+msgstr "read more"
+
+#: .\templates\barbara\index.html:92
+msgid "vabljeni"
+msgstr "we'd love to have you"
+
+#: .\templates\barbara\index.html:93
+msgid "rezervirajte termin"
+msgstr "book an appointment"
+
+#: .\templates\barbara\index.html:95
+msgid "Barbarin delovnik poteka po dogovoru"
+msgstr "Barbara's opening hours are subject to prior agreement"
+
+#: .\templates\barbara\index.html:95
+msgid "Naročite se prek telefona ali e-maila"
+msgstr "Book via phone or e-mail"
+
+#: .\templates\barbara\services.html:47
+msgid "Cenik"
+msgstr "Pricing list"
+
+#: .\templates\barbara\services.html:49
+msgid "Obraz"
+msgstr "Face"
+
+#: .\templates\barbara\services.html:51
+#, fuzzy
+msgid "Nega obraza - osnovna"
+msgstr "Facial care - basic"
+
+#: .\templates\barbara\services.html:52
+#, fuzzy
+#| msgid "Nega obraza"
+msgid "Nega obraza - mini"
+msgstr "Facial care - mini"
+
+#: .\templates\barbara\services.html:53
+#, fuzzy
+#| msgid "Problematična koža"
+msgid "Nega obraza - problematična koža"
+msgstr "Facial care - problematic skin"
+
+#: .\templates\barbara\services.html:54
+#, fuzzy
+#| msgid "Oblikovanje"
+msgid "Oblikovanje obrvi"
+msgstr "Eyebrow shaping"
+
+#: .\templates\barbara\services.html:55
+msgid "Oblikovanje obrvi in barvanje"
+msgstr ""
+
+#: .\templates\barbara\services.html:56
+msgid "Barvanje trepalnic in obrvi"
+msgstr "Eyebrow shaping and tinting"
+
+#: .\templates\barbara\services.html:57
+msgid "Make up - klasični"
+msgstr "Make up - classic"
+
+#: .\templates\barbara\services.html:58
+msgid "Make up - svečani"
+msgstr "Make up - formal"
+
+#: .\templates\barbara\services.html:59
+#, fuzzy
+#| msgid "Odstranjevanje"
+msgid "Odstranjevanje brčic"
+msgstr "Moustache hairs removal"
+
+#: .\templates\barbara\services.html:60
+msgid "Masaža obraza, vratu in dekolteja (30 min.)"
+msgstr "Massage of face, neck and cleavage (30 min.)"
+
+#: .\templates\barbara\services.html:61
+#, fuzzy
+#| msgid "Limfna drenaža"
+msgid "Limfna drenaža obraza (30 min.)"
+msgstr "Facial lymph drainage (30 min.)"
+
+#: .\templates\barbara\services.html:64
+msgid "Trepalnice"
+msgstr "Eyelashes"
+
+#: .\templates\barbara\services.html:66
+#, fuzzy
+#| msgid "Podaljševanje – klasične"
+msgid "Podaljševanje klasične 1/1"
+msgstr "Eyelash lengthening classic 1/1"
+
+#: .\templates\barbara\services.html:67
+#, fuzzy
+#| msgid "Podaljševanje – volumenske"
+msgid "Podaljševanje volumenske"
+msgstr "Lengthening voluminous"
+
+#: .\templates\barbara\services.html:68
+#, fuzzy
+#| msgid "Dopolnitev – manjša"
+msgid "Dopolnitev manjša"
+msgstr "Infills small"
+
+#: .\templates\barbara\services.html:69
+#, fuzzy
+#| msgid "Dopolnitev – večja"
+msgid "Dopolnitev večja"
+msgstr "Infills large"
+
+#: .\templates\barbara\services.html:70
+msgid "Odstranjevanje"
+msgstr "Removal"
+
+#: .\templates\barbara\services.html:71
+#, fuzzy
+#| msgid "Keratinsko vihanje trepalnic"
+msgid "Barvanje trepalnic"
+msgstr "Eyelash tinting"
+
+#: .\templates\barbara\services.html:74
+msgid "Manikura"
+msgstr "Manicure"
+
+#: .\templates\barbara\services.html:76
+#, fuzzy
+#| msgid "Manikura"
+msgid "Manikura osnovna"
+msgstr "Manicure basic"
+
+#: .\templates\barbara\services.html:77
+#, fuzzy
+#| msgid "S klasičnim lakiranjem"
+msgid "Manikura s klasičnim lakiranjem"
+msgstr "Manicure with a classic nail polish"
+
+#: .\templates\barbara\services.html:78
+#, fuzzy
+#| msgid "Z gel lakiranjem"
+msgid "Manikura z gel lakiranjem"
+msgstr "Manicure with a gel nail polish"
+
+#: .\templates\barbara\services.html:79
+msgid "Geliranje naravnih nohtov"
+msgstr "Gel on natural nails"
+
+#: .\templates\barbara\services.html:80
+#, fuzzy
+#| msgid "Podaljševanje z gel lakiranjem"
+msgid "Podaljševanje nohtov z gel lakiranjem"
+msgstr "Nail overlay with a gel nail polish"
+
+#: .\templates\barbara\services.html:81
+#, fuzzy
+#| msgid "Dopolnitev – večja"
+msgid "Dopolnitev gela"
+msgstr "Gel infills"
+
+#: .\templates\barbara\services.html:82
+#, fuzzy
+#| msgid "Popravilo – 1 kos"
+msgid "Popravilo enega nohta"
+msgstr "One nail fix"
+
+#: .\templates\barbara\services.html:83
+#, fuzzy
+#| msgid "Naravni, poškodovani – nega"
+msgid "Nega naravnih in poškodovanih nohtov"
+msgstr "Natural and damaged nail care"
+
+#: .\templates\barbara\services.html:84
+#, fuzzy
+#| msgid "Poslikava"
+msgid "Poslikava enega nohta"
+msgstr "Nail art on one nail"
+
+#: .\templates\barbara\services.html:87
+msgid "Pedikura"
+msgstr "Pedicure"
+
+#: .\templates\barbara\services.html:89
+msgid "Osnovna"
+msgstr "Basic"
+
+#: .\templates\barbara\services.html:90
+msgid "Za problematične noge"
+msgstr "For problematic legs"
+
+#: .\templates\barbara\services.html:91
+#, fuzzy
+#| msgid "Lakiranje"
+msgid "Lakiranje klasično"
+msgstr "Painting clasic"
+
+#: .\templates\barbara\services.html:92
+#, fuzzy
+#| msgid "Lakiranje"
+msgid "Lakiranje gel"
+msgstr "Gel painting"
+
+#: .\templates\barbara\services.html:93
+msgid "Izdelava nohta"
+msgstr "Hand making of a nail"
+
+#: .\templates\barbara\services.html:94
+msgid "Sanacija vraščenega nohta"
+msgstr "Ingrown nail treatment"
+
+#: .\templates\barbara\services.html:95
+#, fuzzy
+#| msgid "Z gel lakiranjem"
+msgid "Pedikura z gel lakiranjem"
+msgstr "Pedicure with a gel nail polish"
+
+#: .\templates\barbara\services.html:98
+msgid "Depilacija"
+msgstr "Waxing services"
+
+#: .\templates\barbara\services.html:100
+msgid "Cele noge"
+msgstr "Full-leg"
+
+#: .\templates\barbara\services.html:101 .\templates\barbara\services.html:113
+msgid "Delna"
+msgstr "Half-leg"
+
+#: .\templates\barbara\services.html:102
+msgid "Brazilska"
+msgstr "Brazilian"
+
+#: .\templates\barbara\services.html:103
+msgid "Podpazduhe"
+msgstr "Underarms"
+
+#: .\templates\barbara\services.html:104
+msgid "Roke"
+msgstr "Arms"
+
+#: .\templates\barbara\services.html:105
+msgid "Hrbet"
+msgstr "Back"
+
+#: .\templates\barbara\services.html:106
+msgid "Celotna (cele noge + brazilska + roke)"
+msgstr "Full (full legs + brazilian + arms)"
+
+#: .\templates\barbara\services.html:107
+#, fuzzy
+#| msgid "Cele noge"
+msgid "Cele noge + brazilska"
+msgstr "Full legs + brazilian"
+
+#: .\templates\barbara\services.html:110
+msgid "Masaža"
+msgstr "Massage"
+
+#: .\templates\barbara\services.html:112
+#, fuzzy
+#| msgid "Celega telesa"
+msgid "Celo telo"
+msgstr "Full-body"
+
+#: .\templates\barbara\services.html:114
+#, fuzzy
+#| msgid "Refleksivna masaža stopal"
+msgid "Refleksna masaža stopal"
+msgstr "Reflexive foot massage"
+
+#: .\templates\barbara\services.html:115
+msgid "Limfna drenaža"
+msgstr "Lymph drainage"
+
+#: .\templates\barbara\services.html:118
+msgid "Darilni bon"
+msgstr "Gift voucher"
+
+#: .\templates\barbara\services.html:124
+#, fuzzy
+#| msgid ""
+#| "Cenik velja od 1.12.2019 dalje. V skladu s 1. odstavkom 94. člena ZDDV "
+#| "nisem zavezanka za DDV, zato cene v ceniku ne vsebujejo DDV"
+msgid ""
+"Cenik velja od 1.1.2022 dalje. V skladu s 1. odstavkom 94. člena ZDDV nisem "
+"zavezanka za DDV, zato cene v ceniku ne vsebujejo DDV"
+msgstr ""
+"The pricing list is valid from 1.1.2022. In accordance with the 1st "
+"paragraph of the 94th article ZZDV I am not subject to VAT, hence the prices "
+"do not include VAT."
+
+#: .\templates\barbara\services.html:128
+msgid "Naročite se še danes"
+msgstr "Book now"
+
+#: .\templates\barbara\services.html:129
+msgid "več"
+msgstr "more"
+
+#~ msgid "Dodatek"
+#~ msgstr "Addition"
+
+#~ msgid "Obrvi"
+#~ msgstr "Brows"
+
+#~ msgid "Barvanje"
+#~ msgstr "Tinting"
+
+#~ msgid "Klasični"
+#~ msgstr "Classic"
+
+#~ msgid "Svečani"
+#~ msgstr "Evening"
+
+#~ msgid "Naravne – barvanje"
+#~ msgstr "Natural - tinting"
+
+#~ msgid "Nohti"
+#~ msgstr "Nails"
+
+#~ msgid "Podaljševanje"
+#~ msgstr "Overlay"
+
+#~ msgid "Gel – dopolnitev – manjša"
+#~ msgstr "Gel - retouching - small"
+
+#~ msgid "Gel – dopolnitev – večja"
+#~ msgstr "Gel - retouching - large"
+
+#~ msgid "Klasično"
+#~ msgstr "Classic"
+
+#~ msgid "1 kos"
+#~ msgstr "1 piece"
+
+#~ msgid "Brčice"
+#~ msgstr "Upper lip"
+
+#~ msgid "Celotna"
+#~ msgstr "Full"
+
+#~ msgid "Obraz + vrat + dekolte"
+#~ msgstr "Face + neck + cleavage"
+
+#~ msgid "Stopal – refleksna"
+#~ msgstr "Feet - reflexive"
+
+#~ msgid "DARILNI BONI"
+#~ msgstr "Gift vouchers"

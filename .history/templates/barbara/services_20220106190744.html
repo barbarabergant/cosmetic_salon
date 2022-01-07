@@ -1,0 +1,138 @@
+{% extends 'barbara/base.html' %}
+{% load static %}
+{% load i18n %}
+
+<link rel="stylesheet" href="{% static 'css/pricing-list.css' %}" />
+
+{% block body_block %} 
+
+<nav class="nav">
+  <div class="container-fluid">
+      <div>
+      <a href="{% url 'barbara:index' %}"><img class="img_logo_2" src="{% static 'images/logo_pink.svg' %}" alt="logo"></a>
+      </div>
+    
+    <div id="mainListDiv" class="main_list">
+      <ul class="navlinks" id="black">
+        <li><a href="{% url 'barbara:index' %}">{% trans "Domov" %}</a></li>
+        <li><a href="{% url 'barbara:about' %}">{% trans "O Barbari" %}</a></li>
+        <li><a class="current" href="{% url 'barbara:services' %}">{% trans "Ponudba" %}</a></li>
+        <li><a href="{% url 'barbara:contact' %}">{% trans "Kontakt" %}</a></li>
+      </ul>
+    </div>
+    <span class="navTrigger" id="pink">
+      <i></i>
+      <i></i>
+      <i></i>
+    </span>
+  </div>
+</nav>	
+
+<!--- compressed menu function -->
+<script>
+$('.navTrigger').click(function () {
+  $(this).toggleClass('active');
+  console.log("Clicked menu");
+  $("#mainListDiv").toggleClass("show_list");
+  $("#mainListDiv").fadeIn();
+
+});
+</script>
+
+<section class="header-section">
+</section>
+
+<div class="container">
+<div class="pricing-list">
+    <p class="main-headings" style="text-align: center;">{% trans "Cenik" %}</p>
+    <section class="pricing-heading">{% trans "Obraz" %}</section>
+    <section class="services_section_style">
+    <div id="obraz"><p class="sub-headings" style="text-align: center;">{% trans "OBRAZ" %}</p></div>
+    <ul class="leaders">
+    <li><span>{% trans "Nega obraza - osnovna" %}</span><span>33,00€</span></li>
+    <li><span>{% trans "Nega obraza - mini" %} </span><span>25,00€</span></li>
+    <li><span>{% trans "Nega obraza - problematična koža" %}</span><span>35,00€</span></li>
+    <li><span>{% trans "Oblikovanje obrvi" %}</span><span>5,00€</span></li>
+    <li><span>{% trans "Oblikovanje obrvi in barvanje" %}</span><span>9,00€</span></li>
+    <li><span>{% trans "Barvanje trepalnic in obrvi" %}</span><span>10,00€</span></li>
+    <li><span>{% trans "Make up - klasični" %}</span><span>15,00€</span></li>
+    <li><span>{% trans "Make up - svečani" %}</span><span>20,00€</span></li>
+    <li><span>{% trans "Odstranjevanje brčic" %}</span><span>4,00€</span></li>
+    <li><span>{% trans "Masaža obraza, vratu in dekolteja (30 min.)" %}</span><span>18,00€</span></li>
+    <li><span>{% trans "Limfna drenaža obraza (30 min.)" %}</span><span>20,00€</span></li>
+    </ul>
+    
+    <section class="pricing-heading">{% trans "Trepalnice" %}</section>
+    <ul class="leaders">
+    <li><span>{% trans "Podaljševanje klasične 1/1" %}</span><span>30,00€</span></li>
+    <li><span>{% trans "Podaljševanje volumenske" %}</span><span>38,00€</span></li>
+    <li><span>{% trans "Dopolnitev manjša" %}</span><span>25,00€</span></li>
+    <li><span>{% trans "Dopolnitev večja" %}</span><span>33,00€</span></li>
+    <li><span>{% trans "Odstranjevanje" %}</span><span>6,00€</span></li>
+    <li><span>{% trans "Barvanje trepalnic" %}</span><span>5,00€</span></li>
+    </ul>
+
+    <div id="roke"><p class="sub-headings" style="text-align: center;">{% trans "ROKE" %}</p></div>
+    <section class="pricing-heading">{% trans "Manikura" %}</section>
+    <ul class="leaders">
+    <li><span>{% trans "Manikura osnovna" %}</span><span>15,00€</span></li>
+    <li><span>{% trans "Manikura s klasičnim lakiranjem" %}</span><span>18,00€</span></li>
+    <li><span>{% trans "Manikura z gel lakiranjem" %}</span><span>24,00€</span></li>
+    <li><span>{% trans "Geliranje naravnih nohtov" %}</span><span>25,00€</span></li>
+    <li><span>{% trans "Podaljševanje nohtov z gel lakiranjem" %}</span><span>28,00€</span></li>
+    <li><span>{% trans "Dopolnitev gela" %}</span><span>25,00€</span></li>
+    <li><span>{% trans "Popravilo enega nohta" %}</span><span>4,00€</span></li>
+    <li><span>{% trans "Nega naravnih in poškodovanih nohtov" %}</span><span>18,00€</span></li>
+    <li><span>{% trans "Poslikava enega nohta" %}</span><span>1,00€</span></li>
+    </ul>
+
+    <div id="noge"><p class="sub-headings" style="text-align: center;">{% trans "NOGE" %}</p></div>
+    <section class="pricing-heading">{% trans "Pedikura" %}</section>
+    <ul class="leaders">
+    <li><span>{% trans "Osnovna" %}</span><span>20,00€</span></li>
+    <li><span>{% trans "Za problematične noge" %}</span><span>25,00€</span></li>
+    <li><span>{% trans "Lakiranje klasično" %}</span><span>5,00€</span></li>
+    <li><span>{% trans "Lakiranje gel" %}</span><span>8,00€</span></li>
+    <li><span>{% trans "Izdelava nohta" %}</span><span>8,00€</span></li>
+    <li><span>{% trans "Sanacija vraščenega nohta" %}</span><span>9,00€</span></li>
+    <li><span>{% trans "Pedikura z gel lakiranjem" %}</span><span>25,00€</span></li>
+    </ul>
+
+    <div id="depilacije"><p class="sub-headings" style="text-align: center;">{% trans "DEPILACIJE" %}</p></div>
+    <section class="pricing-heading">{% trans "Depilacija" %}</section>
+    <ul class="leaders">
+    <li><span>{% trans "Cele noge" %}</span><span>20,00€</span></li>
+    <li><span>{% trans "Delna" %}</span><span>15,00€</span></li>
+    <li><span>{% trans "Brazilska" %}</span><span>18,00€</span></li>
+    <li><span>{% trans "Podpazduhe" %}</span><span>10,00€</span></li>
+    <li><span>{% trans "Roke" %}</span><span>15,00€</span></li>
+    <li><span>{% trans "Hrbet" %}</span><span>18,00€</span></li>
+    <li><span>{% trans "Celotna (cele noge + brazilska + roke)" %}</span><span>40,00€</span></li>
+    <li><span>{% trans "Cele noge + brazilska" %}</span><span>35,00€</span></li>
+    </ul>
+
+    <div id="masaze"><p class="sub-headings" style="text-align: center;">{% trans "MASAŽE" %}</p></div>
+    <section class="pricing-heading">{% trans "Masaža" %}</section>
+    <ul class="leaders">
+    <li><span>{% trans "Celo telo" %}  (60 min.)</span><span>30,00€</span></li>
+    <li><span>{% trans "Delna" %}  (30 min.)</span><span>20,00€</span></li>
+    <li><span>{% trans "Refleksna masaža stopal" %}  (30 min.)</span><span>25,00€</span></li>
+    <li><span>{% trans "Limfna drenaža" %}  (50 min.)</span><span>28,00€</span></li>
+    </ul>
+
+    <div id="boni"><p class="sub-headings" style="text-align: center;">{% trans "DARILNI BONI" %}</p></div>
+    <section class="pricing-heading">{% trans "Darilni bon" %}</section>
+    <a href="{% url 'barbara:contact' %}"><p class="normal-text" style="text-decoration: none; color:black;">{% trans "Po dogovoru" %}.</p></a>
+  </section>
+  </div>
+
+
+  <p class="normal-text" id="services" style="text-align: center;"><br>{% trans "Cenik velja od 1.1.2022 dalje. V skladu s 1. odstavkom 94. člena ZDDV nisem zavezanka za DDV, zato cene v ceniku ne vsebujejo DDV" %}.</p>
+  </div>
+
+  <div id="contact-shortcut" class="row justify-content-center">
+    <p class="about-text">{% trans "Naročite se še danes" %}!&nbsp&nbsp</p>
+    <form><button formaction="{% url 'barbara:contact' %}" class="book_button" id="other">{% trans "več" %}</button></form>
+  </div>
+
+{% endblock %}

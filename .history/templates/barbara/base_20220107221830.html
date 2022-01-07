@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+
+<html>
+	<head lang="en"> 
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>Kozmetični salon Barbara</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="icon" href="{% static 'images/logo_pink.svg' %}">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.0/lottie.min.js"></script>
+	<script src="{% static 'js/lottie.js' %}" type="text/javascript"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		
+	<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cantata+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/navigation.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/pricing-list.css' %}" />
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="{% static 'js/pricing-list.js' %}"></script>
+	<script src="{% static 'js/nav_bar.js' %}"></script>
+	<script src="{% static 'js/up-button.js' %}"></script>
+	</head>
+
+<body>
+
+<button onclick="topFunction()" id="myBtn" aria-hidden="true"><i class='fas'>&#xf106;</i></button>
+<script>
+	//Get the button:
+	mybutton = document.getElementById("myBtn");
+
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		mybutton.style.display = "block";
+	} else {
+		mybutton.style.display = "none";
+	}
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+	document.body.scrollTop = 0; // For Safari
+	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	}
+</script>
+
+	<div>
+		{% block body_block %} 
+		{% endblock %}
+	</div>
+
+<!--- FOOTER -->
+<footer>
+	<div class="container-fluid">
+		<div class="row" style="padding-top: 1rem; padding-bottom: 1rem;">
+		  <div class="col-sm-6 col-md-6 col-lg-3 align-self-center" style="padding-bottom:0;">
+	<section class="logo-section">
+	<div class="my-auto" id="logo">
+		<img src="{% static 'images/logo_white.svg' %}" alt="logo"><br>
+		<p class="footer-logo-salon">{% trans "kozmetični salon" %}</p>
+		<p class="footer-logo-barbara">BARBARA</p>
+	</div>
+</section>
+</div>
+
+	<div class="col-sm-6 col-md-6 col-lg-2" style="padding-top: 30px;">
+	<div class="footer-left">
+	<p class="footer_headings">{% trans "Meni" %}</p>
+	<ul style="list-style-type:none; padding:0; text-align: center;">
+	<li><a class="footer-menu" href="{% url 'barbara:index' %}">{% trans "Domov" %}</a></li>
+	<li><a class="footer-menu" href="{% url 'barbara:about' %}"><center>{% trans "O Barbari" %}</center></a></li>
+	<li><a class="footer-menu" href="{% url 'barbara:services' %}"><center>{% trans "Ponudba" %}</center></a></li>
+	<li><a class="footer-menu" href="{% url 'barbara:contact' %}"><center>{% trans "Kontakt" %}</center></a></li>
+	</ul>
+</div>
+</div>
+
+<div class="col-sm-12 col-md-6 col-lg-3" style="padding-top: 30px;">
+<div class="footer-center">
+<div><p class="footer_headings">{% trans "Odpiralni čas" %}</p>
+<p><center>{% trans "Po dogovoru" %}.</center></p></div>
+<hr>
+<div><center><img class="icon" src="{% static 'images/navigation.png' %}">Savska cesta 20, 4270 Jesenice, SI</center>
+<a href="{% url 'barbara:contact' %}#navigacija"><center><p class="link-text" style="color: #DA7EC4;">{% trans "Zemljevid in navodila za pot" %}</p></center></a></div>
+<hr>
+</div>
+</div>
+
+<div class="col-sm-12 col-md-6 col-lg-4" style="padding-top: 30px;">
+<div class="footer-right">
+<p class="footer_headings">{% trans "Kontakt" %}</p>
+
+<div><img class="icon" src="{% static 'images/call.jpg' %}"><a href="tel:+386 41 429 948" style="color: inherit;"> +386 41 429 948</a></div>
+<br>
+<div><img class="icon" src="{% static 'images/at.png' %}"><a href="mailto:barbara.kacin@gmail.com?subject=Rezervacija%20termina" style="color: inherit;"> barbara.kacin@gmail.com</a></div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

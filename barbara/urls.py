@@ -1,8 +1,6 @@
 from django.urls import path, re_path
-from django.conf.urls import url
 from . import views
-from django.utils.translation import ugettext_lazy as _
-
+from django.utils.translation import gettext_lazy as ugettext_lazy
 app_name = "barbara"
 
 urlpatterns = [
